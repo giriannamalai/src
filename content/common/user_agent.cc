@@ -74,7 +74,7 @@ std::string BuildOSCpuInfo(bool include_android_build_number) {
   std::string android_build_codename = base::SysInfo::GetAndroidBuildCodename();
   std::string android_device_name = base::SysInfo::HardwareModelName();
   if ("REL" == android_build_codename && android_device_name.size() > 0) {
-    android_info_str += "; " + android_device_name;
+    android_info_str += "; Generic";//+ android_device_name;
     semicolon_inserted = true;
   }
 
